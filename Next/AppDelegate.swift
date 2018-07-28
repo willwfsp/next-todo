@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        guard let viewController = TodoConfigurator().resolve() else { return true }
+
+        let bounds = UIScreen.main.bounds
+        self.window = UIWindow(frame: bounds)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+
         return true
     }
 

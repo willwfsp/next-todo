@@ -10,7 +10,7 @@ import UIKit
 
 struct ItemViewModel {
     let title: String
-    let isDone: Bool
+    let isDone: String
 }
 
 protocol TodoDisplayLogic {
@@ -19,11 +19,19 @@ protocol TodoDisplayLogic {
 
 final class TodoViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-
-    
+    var presenter: TodoPresentationLogic? = nil
 
     var items: [ItemViewModel] = [] {
         didSet { tableView.reloadData() }
+    }
+
+    override func viewDidLoad() {
+        presenter!.getItems()
+    }
+
+    func setTableView() {
+        tableView.estimatedRowHeight = 45.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
@@ -36,7 +44,8 @@ extension TodoViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell")!
         let item = items[indexPath.row]
         cell.textLabel?.text = item.title
-
+        cell.detailTextLabel?.text = item.isDone
+        
         return cell
     }
 }
@@ -44,5 +53,6 @@ extension TodoViewController: UITableViewDataSource, UITableViewDelegate {
 extension TodoViewController: TodoDisplayLogic {
     func displayItems(viewModel: [ItemViewModel]) {
         items = viewModel
+        tableView.isHidden = items.isEmpty
     }
 }
