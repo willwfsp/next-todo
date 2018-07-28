@@ -28,11 +28,6 @@ final class TodoViewController: UIViewController {
     override func viewDidLoad() {
         presenter!.getItems()
     }
-
-    func setTableView() {
-        tableView.estimatedRowHeight = 45.0
-        tableView.rowHeight = UITableViewAutomaticDimension
-    }
 }
 
 extension TodoViewController: UITableViewDataSource, UITableViewDelegate {

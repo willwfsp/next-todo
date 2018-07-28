@@ -13,6 +13,9 @@
 		355F7601210C9D5C0024F909 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F7600210C9D5C0024F909 /* Result.swift */; };
 		35C4348B210C9DC5009DB6BD /* TodoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4348A210C9DC5009DB6BD /* TodoConfigurator.swift */; };
 		35C4348E210C9F81009DB6BD /* TodoMockDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4348D210C9F81009DB6BD /* TodoMockDataStore.swift */; };
+		35C43491210CA785009DB6BD /* TodoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C43490210CA785009DB6BD /* TodoViewControllerTests.swift */; };
+		35C43492210CA7D6009DB6BD /* TodoMockDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4348D210C9F81009DB6BD /* TodoMockDataStore.swift */; };
+		35C43494210CABBD009DB6BD /* TodoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C43493210CABBD009DB6BD /* TodoPresenterTests.swift */; };
 		35DFD306210AA0D500DDC390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DFD305210AA0D500DDC390 /* AppDelegate.swift */; };
 		35DFD30B210AA0D500DDC390 /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DFD309210AA0D500DDC390 /* Todo.storyboard */; };
 		35DFD30D210AA0D600DDC390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DFD30C210AA0D600DDC390 /* Assets.xcassets */; };
@@ -39,6 +42,8 @@
 		355F7600210C9D5C0024F909 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		35C4348A210C9DC5009DB6BD /* TodoConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoConfigurator.swift; sourceTree = "<group>"; };
 		35C4348D210C9F81009DB6BD /* TodoMockDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMockDataStore.swift; sourceTree = "<group>"; };
+		35C43490210CA785009DB6BD /* TodoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewControllerTests.swift; sourceTree = "<group>"; };
+		35C43493210CABBD009DB6BD /* TodoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPresenterTests.swift; sourceTree = "<group>"; };
 		35DFD302210AA0D500DDC390 /* Next.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Next.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DFD305210AA0D500DDC390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35DFD30A210AA0D500DDC390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Todo.storyboard; sourceTree = "<group>"; };
@@ -105,6 +110,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		35C4348F210CA776009DB6BD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				35C43490210CA785009DB6BD /* TodoViewControllerTests.swift */,
+				35C43493210CABBD009DB6BD /* TodoPresenterTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		35DFD2F9210AA0D500DDC390 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +154,7 @@
 		35DFD319210AA0D600DDC390 /* NextTests */ = {
 			isa = PBXGroup;
 			children = (
+				35C4348F210CA776009DB6BD /* Presentation */,
 				35C4348C210C9F70009DB6BD /* Mocks */,
 				35DFD31A210AA0D600DDC390 /* NextTests.swift */,
 				35DFD31C210AA0D600DDC390 /* Info.plist */,
@@ -261,6 +276,7 @@
 				35C4348B210C9DC5009DB6BD /* TodoConfigurator.swift in Sources */,
 				355F75FF210C9D500024F909 /* TodoItem.swift in Sources */,
 				35DFD329210AA37300DDC390 /* TodoPresenter.swift in Sources */,
+				35C43492210CA7D6009DB6BD /* TodoMockDataStore.swift in Sources */,
 				355F75F7210C9CD80024F909 /* TodoDataStoreProtocol.swift in Sources */,
 				355F75F9210C9CF70024F909 /* TodoApiDataStore.swift in Sources */,
 				35DFD327210AA13200DDC390 /* TodoViewController.swift in Sources */,
@@ -273,7 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C43494210CABBD009DB6BD /* TodoPresenterTests.swift in Sources */,
 				35DFD31B210AA0D600DDC390 /* NextTests.swift in Sources */,
+				35C43491210CA785009DB6BD /* TodoViewControllerTests.swift in Sources */,
 				35C4348E210C9F81009DB6BD /* TodoMockDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
